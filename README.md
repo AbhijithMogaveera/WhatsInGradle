@@ -1,5 +1,7 @@
-Version catelog was never a replacement for `buildSrc`, its actully `build-logic` (name is upto us) 
-let see how to write common build-logic to avoid boiler plate
+Version catelog was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boiler plate in our buildScript wihtout using `buildSrc` 
+
+why avoid buildSrc..? https://discuss.gradle.org/t/buildsrc-vs-build-logic/46708
+
 ## Before
 ```kotlin
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
