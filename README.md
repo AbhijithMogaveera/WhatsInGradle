@@ -1,6 +1,6 @@
-Version catelog was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boiler plate in our buildScript wihtout using `buildSrc` 
+Version catelog was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boilerplate in our buildScript wihtout using `buildSrc` 
 
-why avoid buildSrc..? https://discuss.gradle.org/t/buildsrc-vs-build-logic/46708
+Why avoid buildSrc and use this method ..? Making changes in buildSrc cause the entire project to be recompiled this way we can solve this problem
 
 ## Before
 ```kotlin
