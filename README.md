@@ -1,4 +1,4 @@
-Version catelog was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boilerplate in our buildScript wihtout using `buildSrc` 
+Version catalogue was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boilerplate in our buildScript wihtout using `buildSrc` 
 
 Why avoid buildSrc and use this method ..? Making changes in buildSrc cause the entire project to be recompiled this way we can solve this problem
 
@@ -216,6 +216,40 @@ dependencyResolutionManagement {
 rootProject.name = "WhatsInGradle"
 include(":app")
 include(":mylibrary")
+```
+## Here is how my versin catalogue looks like
+```kotlin
+[versions]
+agp = "8.4.0"
+kotlin = "1.9.23"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+navigationFragmentKtx = "2.7.7"
+navigationUiKtx = "2.7.7"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+androidLib = { group = "com.android.library", name = "com.android.library.gradle.plugin", version.ref = "agp" }
+androidApp = { group = "com.android.application", name = "com.android.application.gradle.plugin", version.ref = "agp" }
+kgp = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
 ```
 
 # implementation in `app`
