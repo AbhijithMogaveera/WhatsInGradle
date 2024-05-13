@@ -1,3 +1,6 @@
+[Version Catalogue
+](https://github.com/AbhijithMogaveera/WhatsInGradle/blob/master/VersionCatalogue.md)
+
 Version catalogue was never a replacement for `buildSrc` its just there for better mangement for dependencies version, lets see how to reduce boilerplate in our buildScript wihtout using `buildSrc` 
 
 Why avoid buildSrc and use this method ..? Making changes in buildSrc cause the entire project to be recompiled this way we can solve this problem
